@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">wellness</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="fullname">Fullname</string>
+    <string name="email">Email</string>
+    <string name="login_here">Already have an account? Login here</string>
+    <string name="signup">Create and account here</string>
+</resources>
