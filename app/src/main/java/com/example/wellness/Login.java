@@ -1,3 +1,6 @@
+//Code adapted from https://github.com/VishnuSivadasVS/Advanced-HttpURLConnection
+//and https://www.youtube.com/watch?v=X8oD4q3XtQQ
+
 package com.example.wellness;
 
 import androidx.appcompat.app.AppCompatActivity;
