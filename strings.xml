@@ -13,4 +13,5 @@
     <string name="activityName">Activity</string>
     <string name="how_many_hours">How many hours was you activity?</string>
     <string name="add_activity_button">Add activity</string>
+    <string name="your_activities">Your Activities</string>
 </resources>
