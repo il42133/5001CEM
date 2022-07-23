@@ -8,4 +8,9 @@
     <string name="email">Email</string>
     <string name="login_here">Already have an account? Login here</string>
     <string name="signup">Create and account here</string>
+    <string name="add_an_activity">Add an activity</string>
+    <string name="details_of_your_activity">Details of your activity</string>
+    <string name="activityName">Activity</string>
+    <string name="how_many_hours">How many hours was you activity?</string>
+    <string name="add_activity_button">Add activity</string>
 </resources>
