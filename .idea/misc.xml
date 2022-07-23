@@ -8,8 +8,12 @@
         <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.159" />
         <entry key="app/src/main/res/drawable/ic_name.xml" value="0.159" />
         <entry key="app/src/main/res/drawable/ic_user.xml" value="0.159" />
+        <entry key="app/src/main/res/layout/activity_dialog.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/activity_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_listview.xml" value="0.22083333333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/card_item.xml" value="0.209375" />
       </map>
     </option>
   </component>

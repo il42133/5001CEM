@@ -3,14 +3,18 @@
     package="com.example.wellness">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Wellness">
+        android:theme="@style/Theme.Wellness"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ActivityList"
+            android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="true"
@@ -25,7 +29,7 @@
             android:name=".SignUp"
             android:exported="true"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
