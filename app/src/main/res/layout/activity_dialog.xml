@@ -1,37 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_height="400dp"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/topDialogText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="@string/details_of_your_activity"
-        android:textSize="24sp"
         android:textColor="@color/black"
-        android:layout_marginBottom="16dp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/activityName"
-        android:inputType="text"
-        android:id="@+id/activityName" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/activity_hint"
+        app:layout_constraintTop_toBottomOf="@id/topDialogText"
+        app:layout_constraintBottom_toTopOf="@+id/activity_time_input">
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_time_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/how_many_hours"
-        android:inputType="number"
-        android:id="@+id/activityTime" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/hours_hint"
+        app:layout_constraintTop_toBottomOf="@id/activity_input"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_activity_button">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activityTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/confirm_activity_button"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/add_activity_button"
-        android:id="@+id/confirm_activity_button" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_time_input"
+        app:layout_constraintVertical_bias="0.861" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
