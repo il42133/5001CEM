@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -82,20 +83,32 @@ public class ActivityList extends AppCompatActivity {
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     String result = putData.getResult();
-                                    /*if(result.equals("Activity Successfully added")){
-                                        String[] field2 = new String[1];
-                                        field2[0] = "points";
-                                        String[] data2 = new String[1];
-                                        data2[0] = activityT;
+                                    if(result.equals("Activity Successfully added")){
+                                        String[] field2 = new String[2];
+                                        field2[0] = "username";
+                                        field2[1] = "points";
+                                        String[] data2 = new String[2];
+                                        data2[0] = usernameL;
+                                        data2[1] = activityT;
+                                        Log.d("TEST", field2[0]);
+                                        Log.d("TEST", field2[1]);
+                                        Log.d("TEST", data2[0]);
+                                        Log.d("TEST", data2[1]);
                                         PutData putData2 = new PutData("http://192.168.100.25/5001CEM/updatePoints.php", "POST", field2, data2);
                                         if (putData2.startPut()) {
                                             if (putData2.onComplete()) {
                                                 String result2 = putData2.getResult();
-                                                Toast.makeText(getApplicationContext(), result2, Toast.LENGTH_SHORT).show();
+                                                Log.d("TEST", result2);
+                                                if (result2.equals("Points added")) {
+                                                    Toast.makeText(getApplicationContext(), result2, Toast.LENGTH_SHORT).show();
+                                                }
+                                                else {
+                                                    Toast.makeText(getApplicationContext(), result2, Toast.LENGTH_SHORT).show();
+                                                }
                                             }
                                         }
-                                    }*/
-                                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                    }
+                                    //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }
